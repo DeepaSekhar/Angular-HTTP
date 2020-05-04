@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { HttpClient } from "@angular/common/http"
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular-Http-practice';
+  readonly rootURL = 'https://jsonplaceholder.typicode.com';
+
+  constructor(private http: HttpClient) { }
+  title = 'Angular-Http-practice'
+
 }
