@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http"
 import { Observable } from "rxjs"
-import { Post } from '../posts';
+import { User } from '../user'
 import { map } from 'rxjs/operators'
 
 const userImages: string[] = [
-  "../assets/image/users-1.svg ",
+  "../assets/image/users-1.svg",
   "../assets/image/users-2.svg ",
   "../assets/image/users-3.svg ",
   "../assets/image/users-4.svg ",
@@ -14,7 +14,7 @@ const userImages: string[] = [
   "../assets/image/users-7.svg ",
   "../assets/image/users-8.svg ",
   "../assets/image/users-9.svg ",
-  "../assets/image/users-10.svg ",
+  "../assets/image/user-10.svg",
 ]
 
 @Injectable({
@@ -25,8 +25,8 @@ export class JsonPlaceholderService {
 
   readonly URL = "https://jsonplaceholder.typicode.com/users";
   constructor(private http: HttpClient) { }
-  getdata(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.URL).pipe(
+  getdata(): Observable<User[]> {
+    return this.http.get<User[]>(this.URL).pipe(
       //pipe-adding a pipeline
       map(users =>
         //takes in the response from Api and returns a new response

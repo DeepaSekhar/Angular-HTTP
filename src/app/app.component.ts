@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
-import { Post } from "./posts";
+import { User } from "./user";
 import { JsonPlaceholderService } from "./services/json-placeholder.service"
 import { Observable } from 'rxjs';
 import "../styles/styles.scss"
@@ -15,11 +15,13 @@ export class AppComponent {
   constructor(private jsonplaceholder: JsonPlaceholderService) {
 
   }
-  data: Observable<Post[]>
+  data: Observable<User[]>
 
   getDataFromApi() {
     this.data = this.jsonplaceholder.getdata()
   }
-  mouseOver() { }
+  displaycontent() {
+    console.log("mouse over");
+  }
 
 }
