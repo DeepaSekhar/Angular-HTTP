@@ -5,9 +5,6 @@ import { JsonPlaceholderService } from "./services/json-placeholder.service"
 import { Observable } from 'rxjs';
 import "../styles/styles.scss"
 
-
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

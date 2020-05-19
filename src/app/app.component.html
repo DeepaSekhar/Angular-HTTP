@@ -1,10 +1,11 @@
 <div class="container">
-  <h1>HTTP request practice</h1>
-  <div class="image-card-conatainer">
+  <h1>Angualr HTTP Request</h1>
+  <div class="image-card-conatainer" (click)="getDataFromApi()">
     <div class="image-card">
-      <img class="image" src="../assets/image/users-1.svg " />
+      <img class="image" src="{{}}" />
     </div>
-    <div class="image-card">
+
+    <!-- <div class="image-card">
       <img class="image" src="../assets/image/users-2.svg " />
     </div>
     <div class="image-card">
@@ -30,13 +31,13 @@
     </div>
     <div class="image-card">
       <img class="image" src="../assets/image/users-10.svg " />
-    </div>
+    </div> -->
   </div>
 </div>
 
-<!-- <button (click)="getDataFromApi()">Get Data FromAPI</button>
+<button (click)="getDataFromApi()">Get Data FromAPI</button>
 <ul *ngFor="let d of data | async">
   <li>{{ d.id }}</li>
   <li>{{ d.name }}</li>
   <li>{{ d.username }}</li>
-</ul> -->
+</ul>
