@@ -12,16 +12,17 @@ import "../styles/styles.scss"
 })
 
 export class AppComponent {
-  constructor(private jsonplaceholder: JsonPlaceholderService) {
+  constructor(private jsonplaceholder: JsonPlaceholderService) { }
+  users: Observable<User[]>
+  ngOnInit() {
+    this.users = this.jsonplaceholder.getdata()
+    console.log("ng on it", this.users);
 
   }
-  data: Observable<User[]>
 
   getDataFromApi() {
-    this.data = this.jsonplaceholder.getdata()
+
   }
-  displaycontent() {
-    console.log("mouse over");
-  }
+
 
 }
