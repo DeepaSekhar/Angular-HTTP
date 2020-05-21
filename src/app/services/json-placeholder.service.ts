@@ -14,7 +14,7 @@ const userImages: string[] = [
   "../assets/image/users-7.svg ",
   "../assets/image/users-8.svg ",
   "../assets/image/users-9.svg ",
-  "../assets/image/user-10.svg",
+  "../assets/image/users-10.svg",
 ]
 
 @Injectable({
