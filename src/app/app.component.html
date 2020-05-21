@@ -1,11 +1,13 @@
-<div class="container">
-  <h1>Angualr HTTP Request</h1>
-  <!-- <button (click)="getDataFromApi()">Get Data FromAPI</button> -->
+<!-- <button (click)="getDataFromApi()">Get Data FromAPI</button> -->
 
-  <ul *ngFor="let user of users | async">
-    <img src="{{ user.image }}" />
-    <li>{{ user.id }}</li>
-    <li>{{ user.name }}</li>
-    <li>{{ user.username }}</li>
-  </ul>
+<div class="container">
+  <div class="box" *ngFor="let user of users | async">
+    <img class="image" src="{{ user.image }}" />
+
+    <div class="text-box">
+      <!-- <div class="text">{{ user.id }}</div> -->
+      <h3 class="text">{{ user.name }}</h3>
+      <!-- <h2 class="text">{{ user.username }}</h2> -->
+    </div>
+  </div>
 </div>
